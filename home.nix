@@ -6,7 +6,7 @@
       
   home = {
     username = "puiyq";
-    home.homeDirectory = "/home/puiyq";
+    homeDirectory = "/home/puiyq";
   };
 
   # link the configuration file in current directory to the specified location in home directory

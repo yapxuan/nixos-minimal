@@ -5,22 +5,19 @@
     # i.e. nixos-24.11
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    helix.url = "github:helix-editor/helix/master";
     fenix = {
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager/master";
-      # The `follows` keyword in inputs is used for inheritance.
-      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
-      # the `inputs.nixpkgs` of the current flake,
-      # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    helix.url = "github:helix-editor/helix/master";
   };
+
   outputs = inputs@{ self, nixpkgs, fenix, home-manager, ... }: {
-    # NOTE: 'nixos' is the default hostname
+    
     packages.x86_64-linux.default = fenix.packages.x86_64-linux.complete.toolchain;
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -32,13 +29,7 @@
           ./sound.nix
           ./gnome.nix
           ./groups.nix
-          ./home.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.puiyq = import ./home.nix;
-          }
+          ./home-manager.nix
         ];
       };
     };
