@@ -27,6 +27,20 @@
   #   "Xft.dpi" = 172;
   # };
 
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+        enable-extensions = with pkgs.gnomeExtensions; [
+          zen.extensionUuid
+          paperwm.extensionUuid
+          vitals.extensionUuid
+        ];
+      };
+    };
+  };
+  
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     
