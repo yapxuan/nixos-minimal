@@ -43,22 +43,14 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-   
+    users.users.puiyq = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  }; 
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-   users.users.puiyq = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-     packages = with pkgs; [
-       tree
-       bottom
-       fastfetch
-     ];
-   };
-   
+    
    nixpkgs.config.allowUnfree = true;
    programs.firefox.enable = true;
    nixpkgs.overlays = [ inputs.fenix.overlays.default ];
@@ -69,6 +61,7 @@
      wget
      git
      curl
+     just
      fzf
      alacritty
      yazi
