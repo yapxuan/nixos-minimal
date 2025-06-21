@@ -1,15 +1,13 @@
 { config, pkgs, inputs, ... }:
 
 {
-  home-manager.nixosModules.home-manager
-  {
-    home-manager.useGlobalPkgs = true;
-    home-manager.useUserPackages = true;
-    home-manager.users.puiyq = import ./home.nix;
-  }
   
-  home.username = "puiyq";
-  home.homeDirectory = "/home/puiyq";
+  
+      
+  home = {
+    username = "puiyq";
+    home.homeDirectory = "/home/puiyq";
+  };
 
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
@@ -128,7 +126,7 @@
   #     urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
   #     urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
   #   };
-  # };
+   };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
