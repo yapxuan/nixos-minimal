@@ -4,8 +4,12 @@
  services.displayManager.gdm.enable = true;
  services.desktopManager.gnome.enable = true;
 
- environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
    gnome-tweaks
+   gnomeExtensions.zen
+   gnomeExtensions.paperwm
+   gnomeExtensions.vitals
+   
  ];
  
  environment.gnome.excludePackages = with pkgs; [
