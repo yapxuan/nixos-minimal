@@ -1,9 +1,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-  
-  
-      
   home = {
     username = "puiyq";
     homeDirectory = "/home/puiyq";
@@ -32,9 +29,7 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # here is some command line tools I use frequently
-    # feel free to add your own or remove some of them
-
+    
     # social    
     zapzap
     
@@ -105,7 +100,7 @@
       env.TERM = "xterm-256color";
       font = {
         size = 12;
-        draw_bold_text_with_bright_colors = true;
+        colors.draw_bold_text_with_bright_colors = true;
       };
       scrolling.multiplier = 5;
       selection.save_to_clipboard = true;
