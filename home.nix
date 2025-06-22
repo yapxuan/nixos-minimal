@@ -32,10 +32,12 @@
     settings = {
       "org/gnome/shell" = {
         disable-user-extensions = false;
-        enable-extensions = with pkgs.gnomeExtensions; [
-          zen.extensionUuid
-          paperwm.extensionUuid
-          vitals.extensionUuid
+        enable-extensions = [
+          "zen@leotaku"
+          "paperwm@jtaala"
+          "vitals@corecoding"
+          "user-themes@fmuellner"
+          "blur-my-shell@aunetx"
         ];
       };
     };
