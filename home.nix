@@ -86,6 +86,7 @@
     nix-output-monitor
     nixfmt-rfc-style
     nil # nix language server
+    nixd
 
     # system monitoring
     bottom # rust based system monitoring
@@ -96,6 +97,23 @@
     usbutils # lsusb
   ];
 
+  # helix configuration
+  programs.helix = {
+  enable = true;
+  settings = {
+    theme = "autumn_night_transparent";
+    editor.cursor-shape = {
+      normal = "block";
+      insert = "bar";
+      select = "underline";
+    };
+  };
+  languages.language = [{
+    name = "nix";
+    auto-format = true;
+    formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
+  }];};
+  
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
