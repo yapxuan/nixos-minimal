@@ -17,6 +17,8 @@
     fzf
     alacritty
     yazi
+    nerd-fonts.jetbrains-mono
+    btrfs-assistant
     inputs.helix.packages."${pkgs.system}".helix
     (fenix.complete.withComponents [
       "cargo"
