@@ -14,10 +14,8 @@
 
   outputs =
     inputs@{
-      self,
       nixpkgs,
       fenix,
-      home-manager,
       ...
     }:
     {
@@ -34,6 +32,8 @@
             ./gnome.nix
             ./groups.nix
             ./home-manager.nix
+            ./boot.nix
+            ./nixpkgs.nix
           ];
         };
       };
