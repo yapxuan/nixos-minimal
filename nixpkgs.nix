@@ -5,6 +5,7 @@
 }:
 
 {
+  programs.firefox.enable = true;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [ inputs.fenix.overlays.default ];
   environment.systemPackages = with pkgs; [

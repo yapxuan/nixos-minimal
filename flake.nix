@@ -34,6 +34,9 @@
             ./home-manager.nix
             ./boot.nix
             ./nixpkgs.nix
+            ./networking.nix
+            ./locale.nix
+            ./system.nix
           ];
         };
       };
