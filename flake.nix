@@ -26,16 +26,16 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./hardware-configuration.nix
-            ./sound.nix
-            ./gnome.nix
-            ./groups.nix
-            ./home-manager.nix
-            ./boot.nix
-            ./nixpkgs.nix
-            ./networking.nix
-            ./locale.nix
-            ./system.nix
+            ./hosts/hardware/hardware-configuration.nix
+            ./hosts/laptop.nix
+            ./home/home-manager.nix
+            ./modules/sound.nix
+            ./modules/gnome.nix
+            ./modules/groups.nix
+            ./modules/boot.nix
+            ./modules/systempkgs.nix
+            ./modules/networking.nix
+            ./modules/locale.nix
           ];
         };
       };

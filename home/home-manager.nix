@@ -6,6 +6,6 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.puiyq = import ./puiyq.nix;
+    users.puiyq = import ./users/puiyq.nix;
   };
 }
