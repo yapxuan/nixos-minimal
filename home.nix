@@ -54,8 +54,6 @@
     # social
     zapzap
     discord
-    
-    
 
     # archives
     zip
@@ -99,21 +97,24 @@
 
   # helix configuration
   programs.helix = {
-  enable = true;
-  settings = {
-    theme = "autumn_night_transparent";
-    editor.cursor-shape = {
-      normal = "block";
-      insert = "bar";
-      select = "underline";
+    enable = true;
+    settings = {
+      theme = "autumn_night_transparent";
+      editor.cursor-shape = {
+        normal = "block";
+        insert = "bar";
+        select = "underline";
+      };
     };
+    languages.language = [
+      {
+        name = "nix";
+        auto-format = true;
+        formatter.command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+      }
+    ];
   };
-  languages.language = [{
-    name = "nix";
-    auto-format = true;
-    formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
-  }];};
-  
+
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
