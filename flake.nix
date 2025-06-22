@@ -19,7 +19,7 @@
       ...
     }:
     {
-
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
       packages.x86_64-linux.default = fenix.packages.x86_64-linux.complete.toolchain;
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
@@ -27,7 +27,6 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hardware-configuration.nix
-            # ./configuration.nix
             ./sound.nix
             ./gnome.nix
             ./groups.nix
