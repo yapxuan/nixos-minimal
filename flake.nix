@@ -27,7 +27,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hardware-configuration.nix
-            ./configuration.nix
+            # ./configuration.nix
             ./sound.nix
             ./gnome.nix
             ./groups.nix
