@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   home = {
@@ -42,13 +47,16 @@
       };
     };
   };
-  
+
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    
-    # social    
+
+    # social
     zapzap
+    discord
     
+    
+
     # archives
     zip
     xz
@@ -60,7 +68,7 @@
     fzf # A command-line fuzzy finder
     tree
     fastfetch
-    
+
     # misc
     file
     which
@@ -76,10 +84,12 @@
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-output-monitor
+    nixfmt-rfc-style
+    nil # nix language server
 
-    # system monitoring  
-    bottom  # rust based system monitoring
-        
+    # system monitoring
+    bottom # rust based system monitoring
+
     # system tools
     lm_sensors # for `sensors` command
     pciutils # lspci
@@ -117,8 +127,8 @@
       font.size = 12;
       colors = {
         primary = {
-        background = "#181818";   
-        foreground = "#d8d8d8";   
+          background = "#181818";
+          foreground = "#d8d8d8";
         };
         draw_bold_text_with_bright_colors = true;
       };
@@ -130,18 +140,18 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-  #   # TODO add your custom bashrc here
-  #   bashrcExtra = ''
-  #     export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-  #   '';
+    #   # TODO add your custom bashrc here
+    #   bashrcExtra = ''
+    #     export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+    #   '';
 
-  #   # set some aliases, feel free to add more or remove some
-  #   shellAliases = {
-  #     k = "kubectl";
-  #     urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-  #     urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
-  #   };
-   };
+    #   # set some aliases, feel free to add more or remove some
+    #   shellAliases = {
+    #     k = "kubectl";
+    #     urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
+    #     urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
+    #   };
+  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

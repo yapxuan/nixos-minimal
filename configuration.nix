@@ -2,7 +2,13 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   # Use the systemd-boot EFI boot loader.
@@ -12,13 +18,13 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-   networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-   time.timeZone = "Asia/Kuching";
+  time.timeZone = "Asia/Kuching";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -32,7 +38,6 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-    
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -43,36 +48,34 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-    
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
-    
-   nixpkgs.config.allowUnfree = true;
-   programs.firefox.enable = true;
-   nixpkgs.overlays = [ inputs.fenix.overlays.default ];
+
+  nixpkgs.config.allowUnfree = true;
+  programs.firefox.enable = true;
+  nixpkgs.overlays = [ inputs.fenix.overlays.default ];
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-   environment.systemPackages = with pkgs; [
-     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     git
-     curl
-     just
-     fzf
-     alacritty
-     yazi
-     inputs.helix.packages."${pkgs.system}".helix
-     (fenix.complete.withComponents [
-          "cargo"
-          "clippy"
-          "rust-src"
-          "rustc"
-          "rustfmt"
-        ]
-     )
-     rust-analyzer-nightly
-   ];
+  environment.systemPackages = with pkgs; [
+    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    git
+    curl
+    just
+    fzf
+    alacritty
+    yazi
+    inputs.helix.packages."${pkgs.system}".helix
+    (fenix.complete.withComponents [
+      "cargo"
+      "clippy"
+      "rust-src"
+      "rustc"
+      "rustfmt"
+    ])
+    rust-analyzer-nightly
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -116,6 +119,8 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.05"; # Did you read the comment?
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
-
