@@ -23,6 +23,9 @@
     shellAliases = {
       "nix-shell" = "nom-shell";
       "nix-build" = "nom-build";
+      cat = "bat";
+      man = "batman";
+      find = "fd";
     };
   };
 }

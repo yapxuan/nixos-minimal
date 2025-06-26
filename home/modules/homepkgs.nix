@@ -20,6 +20,9 @@
     fzf # A command-line fuzzy finder
     tree
     fastfetch
+    fd
+    bat
+    bat-extras.batman
 
     # misc
     file
@@ -30,6 +33,8 @@
     gawk
     zstd
     gnupg
+    qbittorrent
+    tealdeer
 
     # nix related
     #
@@ -47,5 +52,12 @@
     lm_sensors # for `sensors` command
     pciutils # lspci
     usbutils # lsusb
+
+    # git-related
+    gitui
+    lazygit
+
+    # entertainment
+    kazumi
   ];
 }
