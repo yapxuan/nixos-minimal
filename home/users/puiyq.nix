@@ -17,6 +17,7 @@
     ../modules/homepkgs.nix
     ../modules/starship.nix
     ../modules/git.nix
+    ../modules/nh.nix
   ];
 
 }
