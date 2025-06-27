@@ -46,6 +46,7 @@
       cd = "z";
       grep = "rg";
       ping = "gping";
+      tree = "eza -T";
     };
   };
 }
