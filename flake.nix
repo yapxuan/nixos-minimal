@@ -18,6 +18,8 @@
 
   outputs =
     inputs@{
+      pkgs,
+      config,
       nixpkgs,
       fenix,
       stylix,
@@ -31,17 +33,8 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            stylix.nixosModules.stylix
-            ./hosts/hardware/hardware-configuration.nix
-            ./hosts/laptop.nix
-            ./modules/sound.nix
-            ./modules/gnome.nix
-            ./modules/groups.nix
-            ./modules/boot.nix
-            ./modules/systempkgs.nix
-            ./modules/networking.nix
-            ./modules/locale.nix
-            ./modules/stylix.nix
+            # stylix.nixosModules.stylix
+            ./hosts/zenbook
           ];
         };
       };
