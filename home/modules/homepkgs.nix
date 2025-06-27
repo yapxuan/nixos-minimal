@@ -21,6 +21,7 @@
     tree
     fastfetch
     fd
+    eza
     bat
     bat-extras.batman
 

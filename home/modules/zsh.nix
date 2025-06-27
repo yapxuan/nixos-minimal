@@ -1,10 +1,21 @@
 { ... }:
 
 {
-  programs.bash = {
-    enable = false;
-    enableCompletion = true;
-    bashrcExtra = ''
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting = {
+      enable = true;
+      highlighters = [
+        "main"
+        "brackets"
+        "pattern"
+        "regexp"
+        "root"
+        "line"
+      ];
+    };
+    initContent = ''
       fastfetch
 
       # alias certain nix subcommand to nom
