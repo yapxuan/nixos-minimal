@@ -31,6 +31,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
+            stylix.nixosModules.stylix
             ./hosts/hardware/hardware-configuration.nix
             ./hosts/laptop.nix
             ./modules/sound.nix

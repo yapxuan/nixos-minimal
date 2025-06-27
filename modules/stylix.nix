@@ -14,10 +14,10 @@
       size = 24;
     };
     fonts = {
-      monospace = {
-        package = pkgs.nerd-fonts.meslo-lg;
-        name = "MesloLGS NF";
-      };
+      # monospace = {
+      #   package = pkgs.nerd-fonts.meslo-lg;
+      #   name = "MesloLGS NF";
+      # };
       sansSerif = {
         package = pkgs.montserrat;
         name = "Montserrat";
