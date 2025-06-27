@@ -7,6 +7,14 @@
     enable = true;
     # custom settings
     settings = {
+      terminal.shell = {
+        program = "/etc/profiles/per-user/puiyq/bin/zsh";
+        args = [
+          "-c"
+          "zellij || exec zsh"
+        ];
+
+      };
       env.TERM = "xterm-256color";
       font.size = 12;
       colors = {

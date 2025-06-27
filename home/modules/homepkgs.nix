@@ -24,6 +24,8 @@
     eza
     bat
     bat-extras.batman
+    du-dust
+    gping
 
     # misc
     file
@@ -36,6 +38,7 @@
     gnupg
     qbittorrent
     tealdeer
+    zellij
 
     # nix related
     #
