@@ -34,7 +34,6 @@
             stylix.nixosModules.stylix
             ./hosts/hardware/hardware-configuration.nix
             ./hosts/laptop.nix
-            ./home/home-manager.nix
             ./modules/sound.nix
             ./modules/gnome.nix
             ./modules/groups.nix
