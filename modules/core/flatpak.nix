@@ -11,7 +11,7 @@
         }
       ];
       packages = [
-        "com.heroicgameslauncher.hgl"
+        # "com.heroicgameslauncher.hgl"
         "com.spotify.Client"
         # "it.mijorus.gearlever"
 
