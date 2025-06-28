@@ -14,11 +14,13 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs =
     inputs@{
       nixpkgs,
+      nix-flatpak,
       fenix,
       stylix,
       ...
@@ -31,7 +33,6 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            # stylix.nixosModules.stylix
             ./hosts/zenbook
           ];
         };

@@ -12,6 +12,8 @@
     ./system.nix
     ./service.nix
     ./user.nix
+    ./flatpak.nix
     inputs.stylix.nixosModules.stylix
+    inputs.nix-flatpak.nixosModules.nix-flatpak
   ];
 }
