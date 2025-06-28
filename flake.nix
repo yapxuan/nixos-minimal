@@ -10,12 +10,17 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     inputs@{
       nixpkgs,
       fenix,
+      stylix,
       ...
     }:
     {
@@ -26,16 +31,8 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./hosts/hardware/hardware-configuration.nix
-            ./hosts/laptop.nix
-            ./home/home-manager.nix
-            ./modules/sound.nix
-            ./modules/gnome.nix
-            ./modules/groups.nix
-            ./modules/boot.nix
-            ./modules/systempkgs.nix
-            ./modules/networking.nix
-            ./modules/locale.nix
+            # stylix.nixosModules.stylix
+            ./hosts/zenbook
           ];
         };
       };

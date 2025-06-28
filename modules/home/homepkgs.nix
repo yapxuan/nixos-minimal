@@ -30,7 +30,7 @@
     # misc
     file
     which
-    tree
+    # tree
     gnused
     gnutar
     gawk
