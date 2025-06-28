@@ -1,4 +1,3 @@
-
 { inputs, ... }:
 
 {
@@ -11,7 +10,8 @@
     ./stylix.nix
     ./systempkgs.nix
     ./system.nix
+    ./service.nix
     ./user.nix
     inputs.stylix.nixosModules.stylix
-  ]
+  ];
 }
