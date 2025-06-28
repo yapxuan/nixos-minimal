@@ -3,15 +3,18 @@
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
   home-manager = {
-    userGlobalPkgs = true;
-    userUserPackages = true;
-    user.puiyq = import ../home;
-  };
-  home = {
-    username = "puiyq";
-    homeDirectory = "/home/puiyq";
-    stateVersion = "25.05";
-    shell.enableShellIntegration = true;
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    users.puiyq = {
+      imports = [ ../home ];
+      home = {
+        username = "puiyq";
+        homeDirectory = "/home/puiyq";
+        stateVersion = "25.05";
+        shell.enableShellIntegration = true;
+      };
+    };
   };
   users.users.puiyq = {
     isNormalUser = true;

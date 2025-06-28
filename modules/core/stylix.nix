@@ -7,7 +7,7 @@
     enable = true;
     polarity = "dark";
     opacity.terminal = 0.9;
-    image = ../resources/wallpaper/AnimeGirlNightSky.jpg;
+    image = ../../resources/wallpaper/AnimeGirlNightSky.jpg;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
