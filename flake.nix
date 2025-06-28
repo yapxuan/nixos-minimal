@@ -18,8 +18,6 @@
 
   outputs =
     inputs@{
-      pkgs,
-      config,
       nixpkgs,
       fenix,
       stylix,
