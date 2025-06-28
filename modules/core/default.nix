@@ -13,6 +13,8 @@
     ./service.nix
     ./user.nix
     ./flatpak.nix
+    ./steam.nix
+    ./appimage.nix
     inputs.stylix.nixosModules.stylix
     inputs.nix-flatpak.nixosModules.nix-flatpak
   ];

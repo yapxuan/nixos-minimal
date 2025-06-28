@@ -13,5 +13,6 @@
     ./zsh.nix
     ./git.nix
     ./firefox.nix
+    ./spotify.nix
   ];
 }
