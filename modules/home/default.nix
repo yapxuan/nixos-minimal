@@ -15,5 +15,6 @@
     ./firefox.nix
     ./spotify.nix
     ./zed-editor.nix
+
   ];
 }
