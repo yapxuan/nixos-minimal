@@ -1,4 +1,4 @@
-{ pkgs, nixpkgs, ... }:
+{ ... }:
 
 {
   # nixpkgs.config.rocmSupport = true;
