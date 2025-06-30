@@ -16,6 +16,7 @@
     ./steam.nix
     ./appimage.nix
     ./ollama.nix
+    # ./rocm.nix
     inputs.stylix.nixosModules.stylix
     inputs.nix-flatpak.nixosModules.nix-flatpak
   ];

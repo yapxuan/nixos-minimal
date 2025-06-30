@@ -1,8 +1,14 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   programs.nh = {
     enable = true;
+    package = inputs.nh.packages."${pkgs.system}".nh;
     clean = {
       enable = true;
       extraArgs = "--keep 2";
