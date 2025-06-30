@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     helix.url = "github:helix-editor/helix/master";
+    zed.url = "github:zed-industries/zed/main";
     fenix = {
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,13 +15,18 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nh.url = "github:nix-community/nh";
   };
 
   outputs =
     inputs@{
       nixpkgs,
+      nh,
+      nix-flatpak,
       fenix,
       stylix,
+      zed,
       ...
     }:
     {
@@ -31,7 +37,6 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            # stylix.nixosModules.stylix
             ./hosts/zenbook
           ];
         };
