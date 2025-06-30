@@ -26,6 +26,7 @@
     bat-extras.batman
     du-dust
     gping
+    gearlever
 
     # misc
     file
@@ -63,5 +64,6 @@
 
     # entertainment
     kazumi
+    heroic
   ];
 }

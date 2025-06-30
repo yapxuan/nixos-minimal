@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   nixpkgs.overlays = [ inputs.fenix.overlays.default ];
@@ -11,5 +15,7 @@
     ])
     rust-analyzer-nightly
     inputs.helix.packages."${pkgs.system}".helix
+    inputs.zed.packages."${pkgs.system}".default
+
   ];
 }
