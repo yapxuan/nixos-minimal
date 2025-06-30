@@ -11,6 +11,8 @@
     just
     fzf
     yazi
+    vlc
+    mesa
     # inputs.helix.packages."${pkgs.system}".helix
     # (fenix.complete.withComponents [
     #   "cargo"

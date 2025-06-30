@@ -16,11 +16,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nh.url = "github:nix-community/nh";
   };
 
   outputs =
     inputs@{
       nixpkgs,
+      nh,
       nix-flatpak,
       fenix,
       stylix,

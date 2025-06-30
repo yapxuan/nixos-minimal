@@ -4,9 +4,7 @@
   programs = {
     ncspot = {
       enable = true;
-      settings = {
-        backend = "pulseaudio";
-      };
+      settings.backend = "pulseaudio";
     };
   };
 }
