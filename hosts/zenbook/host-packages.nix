@@ -15,7 +15,7 @@
     ])
     rust-analyzer-nightly
     inputs.helix.packages."${pkgs.system}".helix
-    inputs.zed.packages."${pkgs.system}".default
+    # inputs.zed.packages."${pkgs.system}".default
 
   ];
 }

@@ -14,7 +14,7 @@
     ./git.nix
     ./firefox.nix
     ./spotify.nix
-    ./zed-editor.nix
+#    ./zed-editor.nix
 
   ];
 }
