@@ -23,6 +23,7 @@
     shell = pkgs.zsh;
     extraGroups = [
       "wheel"
+      "libvirtd"
       "networkmanager"
     ];
   };

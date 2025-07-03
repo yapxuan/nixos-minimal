@@ -2,6 +2,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     helix.url = "github:helix-editor/helix/master";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # zed.url = "github:zed-industries/zed/main";
     fenix = {
       url = "github:nix-community/fenix";
@@ -23,6 +27,7 @@
     inputs@{
       nixpkgs,
       nh,
+      nur,
       nix-flatpak,
       fenix,
       stylix,
