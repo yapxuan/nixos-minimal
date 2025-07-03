@@ -15,9 +15,11 @@
     ./flatpak.nix
     ./steam.nix
     ./appimage.nix
-    ./ollama.nix
+    # ./ollama.nix
+    ./virt-manager.nix
     # ./rocm.nix
     inputs.stylix.nixosModules.stylix
     inputs.nix-flatpak.nixosModules.nix-flatpak
+    inputs.nur.modules.nixos.default
   ];
 }

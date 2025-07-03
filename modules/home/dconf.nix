@@ -7,12 +7,12 @@
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enable-extensions = [
-          "zen@leotaku"
-          "paperwm@jtaala"
-          "vitals@corecoding"
-          "user-themes@fmuellner"
           "blur-my-shell@aunetx"
         ];
+      };
+      "org/virt-manager/virt-manager/connections" = {
+        autoconnect = [ "qemu:///system" ];
+        uris = [ "qemu:///system" ];
       };
     };
   };
