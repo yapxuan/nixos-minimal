@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  # imports = [ stylix.nixosModules.stylix ];
-
   stylix = {
     enable = true;
     polarity = "dark";
@@ -14,10 +12,10 @@
       size = 24;
     };
     fonts = {
-      # monospace = {
-      #   package = pkgs.nerd-fonts.meslo-lg;
-      #   name = "MesloLGS NF";
-      # };
+      monospace = {
+        package = pkgs.nerd-fonts.dejavu-sans-mono;
+        name = "DejaVuSansM Nerd Font";
+      };
       sansSerif = {
         package = pkgs.montserrat;
         name = "Montserrat";
