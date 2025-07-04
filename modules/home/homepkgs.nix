@@ -51,7 +51,7 @@
     nixd
 
     # system monitoring
-    bottom # rust based system monitoring
+    # bottom # rust based system monitoring
 
     # system tools
     lm_sensors # for `sensors` command
