@@ -46,6 +46,7 @@
     nixfmt-rfc-style
     nil # nix language server
     nixd
+    cachix
 
     # system tools
     lm_sensors # for `sensors` command
