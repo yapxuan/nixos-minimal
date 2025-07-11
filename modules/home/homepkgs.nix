@@ -25,6 +25,7 @@
     bat-extras.batman
     du-dust
     gearlever
+    cloudflared
 
     # misc
     file
