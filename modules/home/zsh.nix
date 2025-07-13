@@ -47,6 +47,7 @@
       cd = "z";
       grep = "rg";
       tree = "eza -T";
+      curl = "curlie";
     };
   };
 }

@@ -8,10 +8,7 @@
     wget
     curl
     just
-    fzf
-    yazi
     vlc
-    termius
     mesa
   ];
 }

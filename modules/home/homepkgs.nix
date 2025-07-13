@@ -26,6 +26,7 @@
     du-dust
     gearlever
     cloudflared
+    termius
 
     # misc
     file
@@ -38,6 +39,7 @@
     qbittorrent
     tealdeer
     zellij
+    curlie
 
     # nix related
     #
