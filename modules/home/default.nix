@@ -15,7 +15,10 @@
     ./firefox.nix
     ./spotify.nix
     ./bottom.nix
-    #    ./zed-editor.nix
+    ./feh.nix
+    ./fzf.nix
+    ./yazi.nix
+    # ./zed-editor.nix
 
   ];
 }
