@@ -1,11 +1,19 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  pkgs-25_05,
+  ...
+}:
 
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit pkgs-25_05;
+    };
     backupFileExtension = "backup";
     users.puiyq = {
       imports = [ ../home ];
@@ -28,8 +36,4 @@
     ];
   };
   environment.pathsToLink = [ "/etc/profiles/per-user/puiyq/share/zsh" ];
-  nix.settings.trusted-users = [
-    "root"
-    "puiyq"
-  ];
 }

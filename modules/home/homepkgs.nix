@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  pkgs-25_05,
+  inputs,
+  ...
+}:
 
 {
 
@@ -63,6 +68,6 @@
     # entertainment
     kazumi
     heroic
-    animeko
+    (pkgs-25_05.animeko)
   ];
 }
