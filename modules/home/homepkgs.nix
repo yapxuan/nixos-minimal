@@ -29,6 +29,7 @@
     bat
     bat-extras.batman
     du-dust
+    jq
     gearlever
     cloudflared
     termius
