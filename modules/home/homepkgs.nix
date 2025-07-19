@@ -57,6 +57,7 @@
     nixfmt-rfc-style
     nil # nix language server
     nixd
+    nvd
     cachix
 
     # system tools

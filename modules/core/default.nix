@@ -18,8 +18,10 @@
     # ./ollama.nix
     ./virt-manager.nix
     # ./rocm.nix
+    ./nixos-cli.nix
     inputs.stylix.nixosModules.stylix
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.nur.modules.nixos.default
+    inputs.nixos-cli.nixosModules.nixos-cli
   ];
 }
