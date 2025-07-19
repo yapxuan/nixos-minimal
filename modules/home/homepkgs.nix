@@ -46,6 +46,8 @@
     tealdeer
     zellij
     curlie
+    vscode-langservers-extracted
+    bash-language-server
 
     # nix related
     #
