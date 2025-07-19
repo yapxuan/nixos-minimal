@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-25_05.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixos-cli.url = "github:nix-community/nixos-cli";
     helix.url = "github:helix-editor/helix/master";
     nur = {
       url = "github:nix-community/NUR";
@@ -32,6 +33,7 @@
       nixpkgs,
       nixpkgs-25_05,
       nh,
+      nixos-cli,
       nur,
       nix-flatpak,
       fenix,

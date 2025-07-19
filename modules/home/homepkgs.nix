@@ -29,6 +29,7 @@
     bat
     bat-extras.batman
     du-dust
+    jq
     gearlever
     cloudflared
     termius
@@ -45,6 +46,8 @@
     tealdeer
     zellij
     curlie
+    vscode-langservers-extracted
+    bash-language-server
 
     # nix related
     #
@@ -54,6 +57,7 @@
     nixfmt-rfc-style
     nil # nix language server
     nixd
+    nvd
     cachix
 
     # system tools
