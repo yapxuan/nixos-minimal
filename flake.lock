@@ -107,20 +107,20 @@
     "flake-compat": {
       "flake": false,
       "locked": {
-        "lastModified": 1733312601,
-        "narHash": "sha256-4pDvzqnegAfRkPwO3wmwBhVi/Sye1mzps0zHWYnP88c=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "205b12d8b7cd4802fbcb8e8ef6a0f1408781a4f9",
+        "lastModified": 1747046372,
+        "narHash": "sha256-CIVLLkVgvHYbgI2UpXvIIBJ12HWgX+fjA8Xf8PUmqCY=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "9100a0f413b0c601e0533d1d94ffd501ce2e7885",
         "type": "github"
       },
       "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
+        "owner": "edolstra",
+        "repo": "flake-compat",
         "type": "github"
       }
     },
-    "flake-parts_2": {
+    "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
           "nur",
