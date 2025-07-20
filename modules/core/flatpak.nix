@@ -11,10 +11,8 @@
         }
       ];
       packages = [
-        # "com.heroicgameslauncher.hgl"
         "com.spotify.Client"
-        # "it.mijorus.gearlever"
-
+        "com.termius.Termius"
       ];
       update.onActivation = true;
     };
