@@ -4,11 +4,23 @@
 
   programs.git = {
     enable = true;
+    delta = {
+      enable = true;
+      options = {
+        line-numbers = true;
+        navigate = true;
+        hyperlinks = true;
+      };
+    };
     userName = "yapxuan";
     userEmail = "puiyongqing@gmail.com";
     extraConfig = {
-      credential.helper = "store";
-      url."git@github.com:".insteadOf = "https://github.com/";
+      merge = {
+        conflictStyle = "zdiff3";
+      };
+      diff = {
+        colorMoved = "default";
+      };
     };
   };
 }
