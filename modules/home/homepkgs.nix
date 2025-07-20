@@ -32,7 +32,6 @@
     jq
     gearlever
     cloudflared
-    termius
 
     # misc
     file
