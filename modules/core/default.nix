@@ -15,6 +15,7 @@
     ./flatpak.nix
     ./steam.nix
     ./appimage.nix
+    ./fcitx5.nix
     # ./ollama.nix
     ./virt-manager.nix
     # ./rocm.nix
