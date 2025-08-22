@@ -1,19 +1,23 @@
 {
   pkgs,
-  pkgs-25_05,
-  inputs,
   ...
 }:
 
 {
   nixpkgs.config.allowUnfree = true;
   nix.package = pkgs.nixVersions.git;
+  environment.shellInit = ''
+    export NH_NO_CHECKS=1;
+  '';
   environment.systemPackages = with pkgs; [
-    neovim
+    git
+    vim
     wget
     curl
-    just
-    vlc
-    mesa
+    xterm
+    nh
+    cachix
+    bottom
+    firefox
   ];
 }
