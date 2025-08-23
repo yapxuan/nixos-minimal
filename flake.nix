@@ -16,7 +16,7 @@
             inherit inputs;
           };
           modules = [
-            ./hosts/zenbook
+            ./.
           ];
         };
       };

@@ -7,5 +7,6 @@
     ./system.nix
     ./user.nix
     ./git.nix
+    ./hardware.nix
   ];
 }
