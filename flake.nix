@@ -4,10 +4,7 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      ...
-    }:
+    { nixpkgs, ... }:
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
